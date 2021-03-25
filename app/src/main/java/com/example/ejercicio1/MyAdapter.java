@@ -1,22 +1,24 @@
 package com.example.ejercicio1;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
-    private String[] names;
+    private String[] numbers;
     private int layout;
 
 
-    public MyAdapter(String[] names, int layout){
-        this.names = names;
+    public MyAdapter(String[] numbers, int layout){
+        this.numbers = numbers;
         this.layout = layout;
     }
 
@@ -30,20 +32,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-//        holder.getTextView().setText(names.get(position));
-        holder.getTextView().setText(names[position]);
+        holder.getTextView().setText(numbers[position]);
 
         if(position%2 == 0){
-            holder.textView.setBackgroundColor(Color.parseColor("#CDDC39"));
+            holder.textView.setBackgroundColor(Color.parseColor("#90CAF9"));
         } else {
-            holder.textView.setBackgroundColor(Color.parseColor("#E8EAF6"));
+            holder.textView.setBackgroundColor(Color.parseColor("#E3F2FD"));
 
         }
     }
 
     @Override
     public int getItemCount() {
-        return names.length;
+        return numbers.length;
     }
 
     // VIEW HOLDER

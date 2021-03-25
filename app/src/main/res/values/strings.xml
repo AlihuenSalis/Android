@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ejercicio 1</string>
+    <string name="hint_name">Ingrese su Número aquí</string>
+    <string name="hint_nameP2">Ingrese su nuevo número aquí</string>
+    <string name="enviar_name">Enviar</string>
+    <string name="refresh_name">Regenerar</string>
+    <string name="numero">Número</string>
 </resources>
