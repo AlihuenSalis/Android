@@ -68,25 +68,17 @@ public class Pantalla2 extends AppCompatActivity {
     }
 
     public void refreshAllNumbers(String[] numbers){
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mLayoutManager = new LinearLayoutManager(this);
+
         mAdapter = new MyAdapter(numbers, R.layout.recycler_view_item) {};
 
-
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
-    }
-
-    public void onClick(View v){
-
-
     }
 
     private void getAllNames(int end){
         numbers = new String[end];
+        String num = getString(R.string.numero);
         for (int i = 0; i < end; i++){
-            numbers[i] = "Número " + i;
+            numbers[i] = num + " " + i;
         }
     }
 }

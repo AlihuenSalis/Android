@@ -1,14 +1,12 @@
 package com.example.ejercicio1;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
@@ -35,9 +33,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
         holder.getTextView().setText(numbers[position]);
 
         if(position%2 == 0){
-            holder.textView.setBackgroundColor(Color.parseColor("#90CAF9"));
+            holder.textView.setBackgroundResource(R.color.par_color);
         } else {
-            holder.textView.setBackgroundColor(Color.parseColor("#E3F2FD"));
+            holder.textView.setBackgroundResource(R.color.impar_color);
 
         }
     }
