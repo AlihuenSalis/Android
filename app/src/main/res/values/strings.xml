@@ -4,5 +4,9 @@
     <string name="hint_nameP2">Ingrese su nuevo número aquí</string>
     <string name="enviar_name">Enviar</string>
     <string name="refresh_name">Regenerar</string>
-    <string name="numero">Número</string>
+<!--    <string name="numero">Número</string>
+            CORRECCION:
+            Con %1$s podes pasarle 1 parametro, si queres mas parametros
+             vas agregando %2$s, %3$s, etc-->
+    <string name="numero">Número %1$s</string>
 </resources>

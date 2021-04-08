@@ -1,14 +1,12 @@
 package com.example.ejercicio1;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
@@ -21,6 +19,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
         this.numbers = numbers;
         this.layout = layout;
     }
+
+    public void setNumbers(String[] numbers) {
+        this.numbers = numbers;
+    }
+
 
     @NonNull
     @Override
